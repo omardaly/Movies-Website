@@ -1,0 +1,295 @@
+/* Ensure the body takes up the full height of the viewport */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.body {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    background-color: #151414;
+    justify-content: space-around;
+}
+
+/* Slider CSS */
+.slider {
+    width: 100%;
+    margin-top: 2%;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.hero-slide-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out; 
+}
+
+.hero-slide-item.active {
+    opacity: 1; 
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-slide-item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.item-content-wraper {
+    padding-left: 5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.item-content-title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 900;
+    margin-bottom: 7%;
+}
+
+.movie-infos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.movie-info span {
+    margin-left: 5px;
+}
+
+.movie-info i {
+    color: var(--main-color);
+}
+
+.movie-info ~ .movie-info {
+    margin-left: 5px;
+}
+
+.item-content-description {
+    font-size: 1.15rem;
+    margin-top: var(--space-top);
+    line-height: 1.5rem;
+}
+
+.item-action {
+    margin-top: var(--space-top);
+}
+
+.by {
+    background-color: red;
+    border-radius: 20px;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+/***CARD CSS ***********/
+.note {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: 700;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.movie-container {
+    margin-top: 2%;
+    display: flex;
+    background-color: #191818;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.section-header {
+    margin-bottom: 30px;
+    margin-top: 2%;
+    margin-left: 2%;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-left: 5px solid red; 
+    display: flex;
+    align-items: center;
+}
+
+.H2 {
+    margin-left: 20px;
+}
+
+.movie-card {
+    flex: 0 0 18%; 
+    margin-top: 2%;
+    height: 400px;
+    margin-right: 2%;
+    border-radius: 35px;
+    position: relative;
+}
+
+.movie-card:hover {
+    background-color: rgb(100, 7, 7);
+    box-shadow: 0px 0px 80px red;
+}
+
+.movie-card .content-card,
+.movie-card .watch-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.movie-card .watch-card button {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%, 0%);
+    border: none;
+    outline: none;
+    background: none;
+    color: #eee;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.movie-card .content-card {
+    padding: 20px 25px;
+}
+
+.movie-card .content-card:hover {
+    top: -50px;
+}
+
+.movie-card .content-card img {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.movie-card .content-card .shadow {
+    width: 100%;
+    height: 130px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #0f0f0f;
+    box-shadow: 0 0 10px 20px #0F274D;
+    filter: blur(10px);
+}
+
+.movie-card .content-card .content {
+    position: absolute;
+    color: #eee;
+    bottom: 10px;
+}
+
+.movie-card .content-card .content h1 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.movie-card .content-card .content .date {
+    color: #aaa;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 0.75em;
+}
+
+.movie-card .content-card .content b {
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.movie-card .content-card .content .hex-tag {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.movie-card .content-card .content .hex-tag .tag {
+    background: rgba(200, 200, 200, 0.2);
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.85em;
+}
+
+.movie-card .content-card .content .fa-angle-up,
+.movie-card .content-card .fa-angle-down {
+    position: absolute;
+    left: 50%;
+    transform: translate(0%, -50%);
+    font-size: 1.8em;
+    color: #aaa;
+}
+
+/*** search bar ******/
+.search {
+    margin-top: 5%;
+    margin-left: 30%;
+}
+
+.searchButton {
+    border: none;
+    background: red;
+    padding: 9px 20px;
+    border-radius: 10px;
+    width: 6%;
+    color: white;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.searchTerm {
+    width: 50%;
+    height: 35px;
+}
